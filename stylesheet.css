@@ -1,5 +1,4 @@
 /* GENERAL */
-
 * {
     margin: 0;
     padding: 0;
@@ -14,15 +13,18 @@ html {
     scroll-behavior: smooth;
 }
 
-
-p {
-    margin-bottom: 10px;
-}
 div {
     color: rgba(255, 255, 255, 0.895);
     position: center;
 }
 
+p {
+    padding-top: 0%;
+    font-size: 18px;
+    font-family: Pt 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(0, 0, 0);
+    margin-top: 3%;
+}
 
 /* TRANSITION */
 a, .btn{
@@ -30,10 +32,19 @@ a, .btn{
 }
 
 /* DESKTOP NAV */
+#desktop-nav {
+    width: 100%;
+    background-color: rgb(35, 35, 35);
+    margin: 0;
+    padding-bottom: 5%;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
 nav, 
 .nav-links{
     display: flex;
 }
+
 nav{
     justify-content: space-around;
     align-items: center;
@@ -41,11 +52,55 @@ nav{
 }
 
 .nav-links{
-    gap: 2rem;
+    width: 100%;
+    position: fixed; /* Fix the nav at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it is above other elements */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
     list-style: none;
-    font-size: 1.5rem;
-
+    font-size: 1rem;
+    font-weight: 600;
 }
+
+.nav-links li {
+    padding: 15px 30px; 
+    text-align: center;
+    flex: 20px; /* Make each list item take equal space */
+    transition: transform 0.3s ease; 
+}
+
+.nav-links li:hover {
+    transform: scale(1.1); /* Scale up the element to 110% of its size */
+}
+    
+.nav-links li:nth-child(odd) {
+    background-color: rgb(35, 35, 35);
+}
+
+.nav-links li:nth-child(even) {
+    background-color: rgb(225, 226, 230)
+}
+
+.nav-links li:nth-child(odd) a {
+    /* color: #220c0c; Black text for white background */
+    color: #fff; /* White text for black background */
+}
+
+.nav-links li:nth-child(even) a {
+    /* color: #fff; White text for black background */
+    color: #220c0c;
+}
+
+/* Styling for the links */
+.nav-links li a {
+    color: inherit; /* Inherit color from parent */
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 a {
     color: black;
     text-decoration: none;
@@ -57,7 +112,6 @@ a:hover {
     text-decoration: underline;
     text-underline-offset: 1rem;
     text-decoration-color: rgb(181, 181, 181);
-
 }
 
 /* HAMBURGER NAV */
@@ -68,7 +122,6 @@ a:hover {
 .hamburger-menu {
     position: relative;
     display: inline-block;
-    
 }
 
 .hamburger-icon {
@@ -120,201 +173,188 @@ a:hover {
 .hamburger-icon.open span:first-child {
     transform: rotate(45deg) translate(10px, 5px);
   }
-  
   .hamburger-icon.open span:nth-child(2) {
     opacity: 0;
   }
-  
   .hamburger-icon.open span:last-child {
     transform: rotate(-45deg) translate(10px, -5px);
   }
-  
   .hamburger-icon span:first-child {
     transform: none;
   }
-  
   .hamburger-icon span:first-child {
     opacity: 1;
   }
-  
   .hamburger-icon span:first-child {
     transform: none;
   }
 
-
 /* SECTIONS */
-/* section {
-    padding-top: 4vh;
-    height: 96vh;
-    margin: 0 10rem;
+section {
     box-sizing: border-box;
     min-height: fit-content;
-  }
-  
-  .section-container {
-    display: flex;
-  } */
+    padding-bottom: 15%;
+}
 
+.section-container {
+    display: flex;
+}
 
 /* PROFILE SECTION */
+.intro-name{
+    margin: 0%;
+    position: center;
+}
 
-  #profile {
+.name{
+    line-height : 1.5;
+    /* font-style : italic; */
+    /* margin-bottom : 35px; */
+    position: center;
+    background-color: rgb(35, 35, 35)
+    /* box-shadow : 0 0 50px 10px rgb(215, 215, 215); */
+}
+
+#profile {
     /* display: flex; */
     justify-content: flex-start;
     gap: 5rem;
     height: 80vh;
     position: center;
+    margin-bottom: 20%;
+}
 
-  }
-  
-  .section__pic-container {
+.section__pic-container {
     /* padding-left: 5%; */
     /* margin-left: 10%; */
     text-align: left; /* Aligns text to the left */
     display: flex;
     margin: auto 0;
     justify-content: flex-start; /* Centers the image horizontally */
+}
 
-  }
-  .section__pic-container p {
+.section__pic-container p {
     color: black;
-    margin-bottom: .05%;
-  }
+    /* margin-bottom: .05%; */
+}
 
-  .profile-pic {
-    margin-left: 5%;
+.profile-pic {
+    margin-left: 2%;
     width: 350px; /* Adjust the width as needed */
     height: 300px; /* Adjust the height as needed */
     border-radius: 50%; /* Makes the image circular */
     object-fit: cover; /* Ensures the image covers the given dimensions without stretching */
-  }
-  
-  .section__text {
+}
+
+.section__text {
     align-self: center;    
     justify-content: center; /* Centers the image horizontally */
     text-align: center;
-  }
-  
-  .section__text p {
+}
+
+.section__text p {
     font-weight: 600;
-  }
-  
-  .section__text__p1 {
+}
+
+.section__text__p1 {
     text-align: center;
-  }
-  
-  .section__text__p2 {
+}
+
+.section__text__p2 {
     font-size: 1.75rem;
     margin-bottom: 1rem;
-  }
-  
-  .title {
-    font-size: 3rem;
+}
+
+.title {
+    /* font-size: 3rem; */
+    list-style: none;
     text-align: center;
-  }
-  
-  #socials-container {
+}
+
+#socials-container {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
     gap: 1rem;
-  }
+}
 
 .description {
-    padding-left: 5%;
+    /* padding-left: 5%; */
     display: flex;
     flex-direction: column; /* Aligns children vertically */
     align-items: center; /* Centers the children horizontally */
-    /* margin: auto 0; */
     justify-content: flex-start; /* Aligns content to the start */
     border: 2px solid #000; /* Adds a solid black border */
-    padding: 1rem; /* Adds some space between the content and the border */
+    padding: 1rem;
+    /* padding-right: 3rem; */
     border-radius: 10px; /* Adds rounded corners to the box */
     /* font-weight: 600; */
     text-align: center;;
     /* margin-top: 1%; Adds space between the image and the text */
     margin-left: 5%;
     margin-right: 3%;
-    width: 80%; /* Sets the width of the box */
+    width: 90%; /* Sets the width of the box */
     height: auto; /* Sets the height of the box */
-    
     background-color: rgb(235, 235, 235)
-    
-    
 }
 
-
-
-
-.courses li{
+.courses li {
     padding: .4%;
     font-size: 95%;
 }
 
-p, ul, h3, h4,h5, dl, dd{
+h4, h5, dl, dd {
     font-size: 18px;
     font-family: Pt 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: rgb(0, 0, 0);
     margin-bottom: 2%;
     margin-top: 5%;
 }
-h3{
+
+h3 {
     font-size: 15px;
     margin-bottom: 2%;
     margin-top: 8%;
 }
-h2{
+
+h2 {
     font-family: Pt 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 24px;
     color: rgb(147, 162, 223);
-    
 }
 
-
-.myName{
-    
-    
+.myName {
     font-size : 30px; 
     /* line-height : 0.7;*/
-    color : rgb(255, 255, 255);
-
+    color : white;
 }
 
 
-.intro-name{
-    padding-top: 3%;
-    /* padding-left: 3%;
-    padding-right: 3%; */
-    margin: 0%;
-    position: center;
-}
-.profile-header{
+.profile-header {
     position: center;
 }
 
 .profile-header,
 .profile-section {
     padding-bottom:4%;
-
 }
-span{
+
+span {
     /* font-family: sans-serif; */
     font-size: 85%;
     font-weight: normal;
     color: rgb(0, 0, 0);
-    
-    
 }
-.italics{
+
+.italics {
     padding-top: 1%;
     font-style: italic;
     font-size: 80%;
     
 }
-.title h2{
+.title h2 {
     padding-top: 1%;
     padding-bottom: 1%;
-    
     text-align: center;
     color: rgb(0, 0, 0);
     position : sticky;
@@ -325,34 +365,18 @@ span{
     margin-top: 5%;
 }
 
-
-
-.name{
-    /* font-size : 30px; */
-    line-height : 1.5;
-    /* font-style : italic; */
-    /* margin-bottom : 35px; */
-    position: center;
-    /* width: 80%; */
-    /* font-family: 'Roboto Condensed', sans-serif; */
-    /* position : sticky;  */
-    /* top : -1.2em; */
-    background-color: rgb(35, 35, 35)
-    /* box-shadow : 0 0 50px 10px rgb(215, 215, 215); */
-}
-
-.name-description{
+.name-description {
     /* margin-bottom: -20px;  */
     box-sizing: box;
     height: 70px;
     width: 100%; 
     position: center;
     display: flex;
+    color: black;
 }
 
-l1{
+l1 {
     font-size: 20px;
-    color: rgb(255, 255, 255);
     display: block;
     height: 50px;
     width: 100%;
@@ -362,12 +386,15 @@ l1{
     text-align: center;
 
 }
+
 .words{
     overflow: hidden;
     width: 100%;
     text-align: center;
     position: center;
+    color: white;
 }
+
 .words:hover{
     cursor: default;
 }
@@ -399,7 +426,6 @@ l1{
     }
 }
 
-
 h1{
     color: rgb(255, 255, 255);
 }
@@ -417,9 +443,6 @@ h1{
     margin-right : 0.2em;
     margin-left : 0.2em;
     position : relative;
-    
-    
-    
 }
 
 .icons a:after{
@@ -430,7 +453,6 @@ h1{
     right : 0;
     bottom : 0;    
     box-shadow : inset 0 0 2px 1.5px rgb(9, 11, 13);
-    
 }
 
 .icons a.linkedin {
@@ -483,7 +505,6 @@ h1{
     transform: scale(1.3); /* Adjust the scale value as needed */
 }
 
-
 .graph{
     margin-top :5%;
 }
@@ -534,4 +555,15 @@ h1{
     .timeline li:nth-child(even){
             margin-right : auto;
     }
+}
+
+/* FOOTER SECTION */
+footer {
+    height: 26vh;
+    /* margin: 0 1rem; */
+    padding-top: 5%;
+}
+
+footer p {
+    text-align: center;
 }
