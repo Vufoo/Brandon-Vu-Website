@@ -1,48 +1,113 @@
 <!doctype html>
-<html>
-<head>
-   <title> Brandon Vu </title>
-   <meta name="author" content="Brandon Vu">
-   <meta name="description" content="Brandon Vu personal website">
-   <meta name="keyword" content="java, html, css">
-   <meta name="viewport" content="width=device-width, user-scalable=no">
-   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="stylesheet.css">
-</head>
+<html lang="en">
+    <head>
+        <title> Brandon Vu </title>
+        <meta name="author" content="Brandon Vu">
+        <meta name="description" content="Brandon Vu personal website">
+        <meta name="keyword" content="java, html, css">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="stylesheet" href="mediaqueries.css"/>
+    </head>
 
-<body>
-    <div class = "picture"></div>
-    <div class = "profile">
-        <div class = "profile-header">
-            <div class = "name">
-                <div class = "name-description">
-                    <div class = "words">
-                        <l1> Engineer </l1>
-                        <l1> Student </l1>
-                        <l1> Designer </l1>
-                        <l1> Programmer </l1>
-                        <l1> Developer </l1>
-                    </div>
-
-                </div>
-                <h1 class = "myHeader">
-                    Brandon Vu
-                 </h1>
-
-
+    <body>
+        <nav id="desktop-nav">
+            <div>
+                <u1 class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="Brandon_Vu_Resume.pdf" target="_blank">Resume</a></li>
+                </u1>
             </div>
-
-            <h3>Third-year Computer Engineering student at The University of Texas at Austin.
-            </h3>
-            
-
-            <div class = "icons">
-                <a class="linkedin" href="https://www.linkedin.com/in/brandon-vu10/">LinkedIn</a>
-                <a class= "github" href="https://github.com/Vufoo">Github</a>
-                <a class="instagram" href="https://www.instagram.com/brandonbuu/?hl=en">Instagram</a>
+        </nav>
+        <nav id="hamburger-nav">
+            <div class="hamburger-menu">
+              <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+                
+              </div>
+              <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+              </div>
+            </div>
+          </nav>
+        <div class = "intro-name">
+            <div class = "profile-header">
+                <div class = "name">
+                    
+                    <div class = "name-description">
+                        
+                        <div class = "words">
+                            <div class = "myName">
+                                Brandon Vu
+                            </div>
+                            <l1> Engineer </l1>
+                            <l1> Student </l1>
+                            <l1> Designer </l1>
+                            <l1> Programmer </l1>
+                            <l1> Tester </l1>
+                        </div> 
+                        
+                    </div>
+                </div>
             </div>
         </div>
-        <div class = "title">
+        
+        <section id = "profile">
+           
+            <div class = "section__pic-container">
+                <img src = "./images/brandon2.png" alt = "Brandon Vu Pic" class="profile-pic">
+                <div class = "description"> 
+                    <p>Hello welcome to personal portfolio website!</p>
+                    <p>I graduated from the University of Texas at Austin majoring in Electrical and Computer Engineering. I'm a continuing my education as a Masters ECE student at UT Austin with a focus in Architecture, Computing Systems, and Embedded Systems. My interests include computer architecture, digital hardware design, and design verification.</p>
+                    <p></p>
+                    <div class = "icons">
+                        <a class="mail" href="brandonvu10@gmail.com">Mail</a>
+                        <a class="linkedin" href="https://www.linkedin.com/in/brandon-vu10/">LinkedIn</a>
+                        <a class="github" href="https://github.com/Vufoo">Github</a>
+                        <a class="instagram" href="https://www.instagram.com/brandonbuu/?hl=en">Instagram</a>
+                        <a class="facebook" href="https://www.facebook.com/profile.php?id=100009266546421">Facebook</a>
+                        
+                        
+                        
+                    </div>
+                </div>
+               
+            </div>
+            
+        </section>
+        
+        <script src="script.js"></script>
+    </body>
+
+</html>            
+
+
+                <!-- </div>
+
+                <h3>Third-year Computer Engineering student at The University of Texas at Austin.
+                </h3>
+                
+
+                <div class = "icons">
+                    <a class="linkedin" href="https://www.linkedin.com/in/brandon-vu10/">LinkedIn</a>
+                    <a class= "github" href="https://github.com/Vufoo">Github</a>
+                    <a class="instagram" href="https://www.instagram.com/brandonbuu/?hl=en">Instagram</a>
+                </div>
+            </div>
+
+         -->
+
+
+
+
+        <!-- <div class = "title">
             <h2>Contacts</h2>
             <dl class = "school">
                 <dt>Phone: 512-986-0130</dt>
@@ -66,7 +131,7 @@
 
                 <u1 class = "courses">
                     <li>Bachelor of Science in Computer Engineering</li>
-                    <li>Current GPA: 3.72</li>
+                    <li>Current GPA: 3.80</li>
                 </u1>
                 
                 </u1>
@@ -261,10 +326,6 @@
         </div>
 
 
-    </div>
+    </div> -->
 
         
-    
-</body>
-
-</html>

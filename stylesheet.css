@@ -1,43 +1,260 @@
-div{
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(225, 226, 230);
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+p {
+    margin-bottom: 10px;
+}
+div {
     color: rgba(255, 255, 255, 0.895);
-    
+    position: center;
+}
+
+
+/* TRANSITION */
+a, .btn{
+    transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+nav, 
+.nav-links{
+    display: flex;
+}
+nav{
+    justify-content: space-around;
+    align-items: center;
+    height: 17wh;
+}
+
+.nav-links{
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+
+}
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181);
+
+}
+
+/* HAMBURGER NAV */
+#hamburger-nav {
+    display: none;
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
     
 }
-body {
-    background: rgb(1, 0, 9);
-    font-family: "Poppins", sans-serif;
-    
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
 }
   
-.picture {
-    background-image : url(images/brandon.png);
-    background-size : cover;
-    background-position : center;
-    margin-left: 15%;
+.menu-links a {
+    display: black;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+    list-style: none;
+}
+
+.menu-links.open {
+    max-height: 300px;
+
+}
+
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+  }
+  
+  .hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+  }
+  
+  .hamburger-icon span:first-child {
+    transform: none;
+  }
+  
+  .hamburger-icon span:first-child {
+    opacity: 1;
+  }
+  
+  .hamburger-icon span:first-child {
+    transform: none;
+  }
+
+
+/* SECTIONS */
+/* section {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+  }
+  
+  .section-container {
+    display: flex;
+  } */
+
+
+/* PROFILE SECTION */
+
+  #profile {
+    /* display: flex; */
+    justify-content: flex-start;
+    gap: 5rem;
+    height: 80vh;
+    position: center;
+
+  }
+  
+  .section__pic-container {
+    /* padding-left: 5%; */
+    /* margin-left: 10%; */
+    text-align: left; /* Aligns text to the left */
+    display: flex;
+    margin: auto 0;
+    justify-content: flex-start; /* Centers the image horizontally */
+
+  }
+  .section__pic-container p {
+    color: black;
+    margin-bottom: .05%;
+  }
+
+  .profile-pic {
+    margin-left: 5%;
+    width: 350px; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the given dimensions without stretching */
+  }
+  
+  .section__text {
+    align-self: center;    
+    justify-content: center; /* Centers the image horizontally */
+    text-align: center;
+  }
+  
+  .section__text p {
+    font-weight: 600;
+  }
+  
+  .section__text__p1 {
+    text-align: center;
+  }
+  
+  .section__text__p2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .title {
+    font-size: 3rem;
+    text-align: center;
+  }
+  
+  #socials-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+
+.description {
+    padding-left: 5%;
+    display: flex;
+    flex-direction: column; /* Aligns children vertically */
+    align-items: center; /* Centers the children horizontally */
+    /* margin: auto 0; */
+    justify-content: flex-start; /* Aligns content to the start */
+    border: 2px solid #000; /* Adds a solid black border */
+    padding: 1rem; /* Adds some space between the content and the border */
+    border-radius: 10px; /* Adds rounded corners to the box */
+    /* font-weight: 600; */
+    text-align: center;;
+    /* margin-top: 1%; Adds space between the image and the text */
+    margin-left: 5%;
+    margin-right: 3%;
+    width: 80%; /* Sets the width of the box */
+    height: auto; /* Sets the height of the box */
+    
+    background-color: rgb(235, 235, 235)
+    
     
 }
-li{
-    font-family: 'Times New Roman', Times, serif;
-    padding: 1%;
-    font-size: 75%;
-    list-style-type: none;
-}
+
+
+
 
 .courses li{
     padding: .4%;
     font-size: 95%;
 }
 
-/* .bullet li{
-    
-    list-style-type: square;
-    margin-left : 7%;
-} */
-
 p, ul, h3, h4,h5, dl, dd{
     font-size: 18px;
     font-family: Pt 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(217, 220, 235);
+    color: rgb(0, 0, 0);
     margin-bottom: 2%;
     margin-top: 5%;
 }
@@ -49,26 +266,30 @@ h3{
 h2{
     font-family: Pt 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 24px;
-    color: rgb(186, 193, 227);
+    color: rgb(147, 162, 223);
     
 }
 
-.myHeader{
+
+.myName{
     
-    text-align: center;
-    font-size : 1.5em; 
-    line-height : 0.7;
-    color : rgb(190, 190, 217);
-    padding: -10px;
-    position : relative;
-    margin-bottom : 40px;
-    bottom: 20px;
-   
+    
+    font-size : 30px; 
+    /* line-height : 0.7;*/
+    color : rgb(255, 255, 255);
+
 }
-.profile{
-    padding: 3%;
+
+
+.intro-name{
+    padding-top: 3%;
+    /* padding-left: 3%;
+    padding-right: 3%; */
     margin: 0%;
-    
+    position: center;
+}
+.profile-header{
+    position: center;
 }
 
 .profile-header,
@@ -77,10 +298,10 @@ h2{
 
 }
 span{
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     font-size: 85%;
     font-weight: normal;
-    color: rgb(217, 220, 235);
+    color: rgb(0, 0, 0);
     
     
 }
@@ -93,12 +314,12 @@ span{
 .title h2{
     padding-top: 1%;
     padding-bottom: 1%;
-    padding-left: 1%;
+    
     text-align: center;
-    color: rgb(186, 193, 227);
+    color: rgb(0, 0, 0);
     position : sticky;
     top : 0;
-    background-color: rgb(1, 3, 33);
+    background-color: rgb(147, 162, 223);
     font-size: 21px;
     margin-bottom: 5%;
     margin-top: 5%;
@@ -107,79 +328,80 @@ span{
 
 
 .name{
-    
-    font-size : 30px;
+    /* font-size : 30px; */
     line-height : 1.5;
-    font-style : italic;
-    margin-bottom : 40px;
-    width: 100%;
-    font-family: 'Roboto Condensed', sans-serif;
-    position : sticky; 
-    top : -1.2em;
-    background-color: rgb(9, 13, 66);
-    box-shadow : 0 0 50px 10px rgb(13, 17, 74);
+    /* font-style : italic; */
+    /* margin-bottom : 35px; */
+    position: center;
+    /* width: 80%; */
+    /* font-family: 'Roboto Condensed', sans-serif; */
+    /* position : sticky;  */
+    /* top : -1.2em; */
+    background-color: rgb(35, 35, 35)
+    /* box-shadow : 0 0 50px 10px rgb(215, 215, 215); */
 }
 
 .name-description{
-    padding-top: 10px;
-    margin-bottom: -21px;
+    /* margin-bottom: -20px;  */
     box-sizing: box;
-    height: 50px;
-    width: 100%;
-    position:center;
+    height: 70px;
+    width: 100%; 
+    position: center;
     display: flex;
-
 }
 
 l1{
-    color: rgb(147, 147, 209);
+    font-size: 20px;
+    color: rgb(255, 255, 255);
     display: block;
     height: 50px;
     width: 100%;
-    display: flex;
     position: center;
-    padding-left: 40%;
     animation: spin_words 6s infinite;
-    
+    padding-bottom: 20px;
+    text-align: center;
 
 }
 .words{
-    overflow:hidden;
+    overflow: hidden;
     width: 100%;
-    
-    
+    text-align: center;
+    position: center;
+}
+.words:hover{
+    cursor: default;
 }
 
 @keyframes spin_words{
     10%{
-        transform: translateY(-112%);
+        transform: translateY(-135%);
     }
     25%{
-        transform: translateY(-100%);
+        transform: translateY(-120%);
     }
     35%{
-        transform: translateY(-212%);
+        transform: translateY(-235%);
     }
     50%{
-        transform: translateY(-200%);
+        transform: translateY(-220%);
     }
     60%{
-        transform: translateY(-312%);
+        transform: translateY(-335%);
     }
     75%{
-        transform: translateY(-300%);
+        transform: translateY(-320%);
     }
     85%{
-        transform: translateY(-412%);
+        transform: translateY(-435%);
     }
     100%{
-        transform: translateY(-400%);
+        transform: translateY(-420%);
     }
 }
 
 
 h1{
-    color: rgb(7, 7, 170);
+    color: rgb(255, 255, 255);
 }
 
 .icons{
@@ -207,18 +429,60 @@ h1{
     top : 0;
     right : 0;
     bottom : 0;    
-    box-shadow : inset 0 0 2px 1.5px rgb(1, 12, 31);
+    box-shadow : inset 0 0 2px 1.5px rgb(15, 17, 20);
     
 }
 
-.icons a.linkedin{ background-image : url(images/linkoff.png);}
-.icons a.linkedin:hover{background-image : url(images/linkon.png);}
+.icons a.linkedin {
+    background-image: url(images/linkoff.png);
+    transition: transform 0.3s;
+}
 
-.icons a.github{ background-image : url(images/gitoff.png);}
-.icons a.github:hover{background-image : url(images/giton.png);}
+.icons a.linkedin:hover {
+    background-image: url(images/linkon.png);
+    transform: scale(1.3); /* Adjust the scale value as needed */
+}
 
-.icons a.instagram{background-image : url(images/instaoff.png);}
-.icons a.instagram:hover{background-image : url(images/instaon.png);}
+.icons a.github {
+    background-image: url(images/gitoff.png);
+    transition: transform 0.3s;
+}
+
+.icons a.github:hover {
+    background-image: url(images/giton.png);
+    transform: scale(1.3); /* Adjust the scale value as needed */
+}
+
+.icons a.instagram {
+    background-image: url(images/instaoff.png);
+    transition: transform 0.3s;
+}
+
+.icons a.instagram:hover {
+    background-image: url(images/instaon.png);
+    transform: scale(1.3); /* Adjust the scale value as needed */
+}
+
+.icons a.mail {
+    background-image: url(images/mailoff.png);
+    transition: transform 0.3s;
+}
+
+.icons a.mail:hover {
+    background-image: url(images/mailon.png);
+    transform: scale(1.3); /* Adjust the scale value as needed */
+}
+
+.icons a.facebook {
+    background-image: url(images/facebookoff.png);
+    transition: transform 0.3s;
+}
+
+.icons a.facebook:hover {
+    background-image: url(images/facebookon.png);
+    transform: scale(1.3); /* Adjust the scale value as needed */
+}
+
 
 .graph{
     margin-top :5%;
@@ -258,11 +522,11 @@ h1{
         width : 60vw;
         height : 100vh;
         padding : 0;
-        }
-
-    .profile {
-        margin-right :45vw;
     }
+
+    /* .profile {       Makes it go to left
+        margin-right :45vw;
+    } */
     .timeline li{
         width : 30%;
 

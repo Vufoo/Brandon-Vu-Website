@@ -1,4 +1,4 @@
 # BrandonVu.github.io
 
-My Personal Website
+My Personal Portfolio/Resume Website
 
