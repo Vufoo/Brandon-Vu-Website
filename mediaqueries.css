@@ -1,8 +1,125 @@
-/* @media screen and (max-width: 1200px) {
+/* General reset and styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(225, 226, 230);
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mobile-friendly layout adjustments */
+@media (max-width: 768px) {
+    /* General text adjustments for better readability on mobile */
+    body {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-top: 2%;
+    }
+
+    /* Desktop nav adjustments for mobile */
     #desktop-nav {
-        display:none;
+        padding-bottom: 2%;
     }
-    #hamburger-nav {
-        display: flex;
+
+    .nav-links {
+        flex-direction: column; /* Stack the nav links vertically */
+        font-size: 1.2rem; /* Increase font size for better touch targets */
     }
-} */
+
+    .nav-links li {
+        padding: 10px 0; /* Reduce padding for better spacing on mobile */
+        flex: none; /* Reset flex behavior to allow stacking */
+    }
+
+    /* Profile section adjustments */
+    #profile {
+        flex-direction: column;
+        align-items: center; /* Center items on mobile */
+        height: auto; /* Allow height to adjust dynamically */
+        margin-bottom: 10%; /* Reduce bottom margin */
+    }
+
+    .section__pic-container {
+        justify-content: center; /* Center the image */
+    }
+
+    .profile-pic {
+        width: 250px; /* Reduce size on mobile */
+        height: 250px;
+    }
+
+    .description {
+        width: 100%; /* Full width on mobile */
+        margin-left: 0;
+        margin-right: 0;
+        padding: 1.5rem;
+    }
+
+    /* Experience section adjustments */
+    .details-container {
+        width: 90%; /* Increase width on mobile */
+        padding: 1.5em;
+    }
+
+    .title-container,
+    .title,
+    .experience-sub-title {
+        font-size: 1.5rem; /* Reduce font size */
+    }
+
+    /* Projects and notes sections adjustments */
+    .projects,
+    .courses {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 20px; /* Adjust gap for mobile */
+        width: 100%; /* Full width on mobile */
+    }
+
+    .project,
+    .course {
+        padding: 1.5em; /* Adjust padding */
+        border-radius: 15px; /* Slightly smaller border radius */
+    }
+
+    /* Footer section adjustments */
+    footer {
+        height: auto;
+        padding-top: 2%;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Additional styling for larger screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Adjustments for tablet screens */
+    .profile-pic {
+        width: 300px;
+        height: 300px;
+    }
+
+    .description {
+        width: 95%;
+        margin-left: 2.5%;
+    }
+
+    .details-container {
+        width: 85%;
+    }
+
+    .projects,
+    .courses {
+        width: 95%;
+    }
+}
