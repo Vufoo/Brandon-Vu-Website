@@ -548,20 +548,139 @@ l1 { /*Rotating Words*/
     list-style: none;
   }
 
+    .details-container:hover {
+    background: linear-gradient(90deg, rgb(150, 150, 150), rgb(100, 100, 115));
+    }
+
+    .article-container {
+        margin: 1%;
+        display: none;
+        text-align: center;
+        padding: 1em;
+        color: rgb(30, 30, 30);
+        list-style: circle;
+        border-radius : 20px;
+        box-sizing : border-box;
+        border: 2px solid #000; 
+        background-color: rgb(190, 190, 200)
+        
+    }
+
+    .job-description{
+        margin-top: 2%;
+        color:rgb(68, 67, 84);
+        text-align: center;
+    }
+
+    .job-description li{
+       padding: 7px;
+    }
+
+    .article{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+        padding: 0;
+        margin: 0 auto;
+        list-style-type: none; /* Removes default list styling */
+        width: 100%; /* Set the width of the grid */
+        color: rgb(30, 30, 30);
+        font-size: 1rem;
+
+    }
+
+    .article p{
+        color: rgb(16, 14, 62);
+        font-size: 1.10rem;
+        
+    }
+    .article h3{
+        font-size: 1.35rem;
+        
+    }
+
+    /* Reveal on hover */
+    .details-container:hover .article-container {
+        display: block;
+    }
+
+    /* Reveal on click */
+    .details-container.active .article-container {
+        display: block;
+    }
+
+    /* Optional: Remove hover effect if active */
+    .details-container.active:hover {
+        background: linear-gradient(90deg, rgb(150, 150, 150), rgb(100, 100, 115));
+    }
+
   .title-container {
     display: flex;
     align-items: center; 
     justify-content: center; 
     width: 100%;
   }
-
-  .experience-sub-title {
-    margin-bottom: 3px;
+  .experience-sub-title,
+.job-title {
+    display: inline-block;
+    vertical-align: middle; /* Aligns elements vertically */
+    text-align: center;
+    align-items: center;
+    color: rgb(68, 68, 96);
+}
+  .sub-title {
+    /* margin-bottom: 1%; */
     color: rgb(41, 41, 41);
     font-weight: 600;
     font-size: 1.5rem;
     text-align: center; /* Ensures the text aligns left within its container */
+    align-items: center;
+    padding-bottom: 1%;
   }
+
+
+
+  .logo {
+    text-align: center;
+    padding-bottom: 1%;
+
+  }
+
+  .logo a{
+    width : 40px;
+    height : 40px;
+    display : inline-block;
+    text-indent: -9999px;
+    background-color : white;
+    margin-right : 0.2em;
+    margin-left : 0.2em;
+    position : relative;
+    
+  } 
+
+.logo a.microsoft {
+    background-image: url(images/microsoft.png);
+    transition: transform 0.3s;
+}
+
+.logo a.aws {
+    background-image: url(images/aws.png);
+    transition: transform 0.3s;
+}
+
+.logo a.amd {
+    background-image: url(images/amd.png);
+    transition: transform 0.3s;
+}
+
+.logo a.homedepot {
+    background-image: url(images/homedepot.png);
+    transition: transform 0.3s;
+}
+
+.logo a.codeninjas {
+    background-image: url(images/codeninjas.png);
+    transition: transform 0.3s;
+}
 
   .job-title{
     font-size: 1.32rem;
@@ -577,16 +696,6 @@ l1 { /*Rotating Words*/
     margin-top: 5px; /* Adds space between the job title and location/date */
   }
   
-  article {
-    display: flex;
-    width: 10rem;
-    justify-content: space-around;
-    gap: 0.5rem;
-  }
-  
-  article .icon {
-    cursor: default;
-  }
 
 /* PROJECTS SECTION */
   .projects {
@@ -602,11 +711,36 @@ l1 { /*Rotating Words*/
   .project{
     background: linear-gradient(90deg, rgb(200, 200, 200), rgb(130, 130, 145));
     color: rgb(1, 0, 9);
-    padding: 1em; 
+    padding: 1.5em; 
     text-align: center;
     box-sizing: border-box;
     border-radius: 20px;
   }
+
+    .project:hover {
+        background: linear-gradient(90deg, rgb(150, 150, 150), rgb(100, 100, 115));
+    }
+
+    .project-details {
+        display: none;
+        text-align: left;
+        padding-top: 1em;
+    }
+
+    /* Reveal on hover */
+    .project:hover .project-details {
+        display: block;
+    }
+
+    /* Reveal on click */
+    .project.active .project-details {
+        display: block;
+    }
+
+    /* Optional: Remove hover effect if active */
+    .project.active:hover {
+        background: linear-gradient(90deg, rgb(150, 150, 150), rgb(100, 100, 115));
+    }
 
 /* NOTES SECTION */
   .courses {
@@ -622,13 +756,39 @@ l1 { /*Rotating Words*/
   .course {
     background: linear-gradient(90deg, rgb(200, 200, 200), rgb(130, 130, 145));
     color: rgb(1, 0, 9);
-    padding: 1em; 
+    padding: 1.5em; 
     text-align: center;
     box-sizing: border-box;
     /* margin-left: 2%;
     margin-right: 2%; */
     border-radius: 20px;
   }
+
+
+.course:hover {
+    background: linear-gradient(90deg, rgb(150, 150, 150), rgb(100, 100, 115));
+}
+
+.course-details {
+    display: none;
+    text-align: left;
+    padding-top: 1em;
+}
+
+/* Reveal on hover */
+.course:hover .course-details {
+    display: block;
+}
+
+/* Reveal on click */
+.course.active .course-details {
+    display: block;
+}
+
+/* Optional: Remove hover effect if active */
+.course.active:hover {
+    background: linear-gradient(90deg, rgb(150, 150, 150), rgb(100, 100, 115));
+}
 
 /* FOOTER SECTION */
     footer {
