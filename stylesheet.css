@@ -480,14 +480,17 @@ l1 { /*Rotating Words*/
     float : right;
 }
 
-.graph li[data-score="100%"]{width : 70%;}
-.graph li[data-score="95%"]{width : 65%;}
-.graph li[data-score="90%"]{width : 60%;}
-.graph li[data-score="85%"]{width : 55%;}
-.graph li[data-score="80%"]{width : 50%;}
-.graph li[data-score="70%"]{width : 40%;}
-.graph li[data-score="60%"]{width : 30%;}
-.graph li[data-score="50%"]{width : 20%;}
+.graph li[data-score="100%"] { width: 70%; }
+.graph li[data-score="95%"]  { width: 65%; }
+.graph li[data-score="90%"]  { width: 60%; }
+.graph li[data-score="85%"]  { width: 55%; }
+.graph li[data-score="80%"]  { width: 50%; }
+.graph li[data-score="75%"]  { width: 45%; }
+.graph li[data-score="70%"]  { width: 40%; }
+.graph li[data-score="65%"]  { width: 35%; }
+.graph li[data-score="60%"]  { width: 30%; }
+.graph li[data-score="55%"]  { width: 25%; }
+.graph li[data-score="50%"]  { width: 20%; }
 
 @media ( min-width : 768px) {
     .picture{
@@ -656,6 +659,11 @@ l1 { /*Rotating Words*/
     position : relative;
     
   } 
+
+.logo a.arm {
+    background-image: url(images/arm.png);
+    transition: transform 0.3s;
+}
 
 .logo a.microsoft {
     background-image: url(images/microsoft.png);
