@@ -602,12 +602,24 @@ l1 { /*Rotating Words*/
 }
 
 .article-container {
-    width: 100%;
+    width: 95%;
     display: none;
     padding: 1em;
     color: rgb(30, 30, 30);
     border: 2px solid #000;
     background-color: rgb(190, 190, 200);
+    margin: 1em auto;
+    border-radius: 15px;  /* Added curved corners */
+}
+
+/* Show details on hover */f
+.details-container:hover .article-container {
+    display: block;
+}
+
+/* Keep details visible when clicked */
+.details-container.active .article-container {
+    display: block;
 }
 
 .article {
@@ -912,3 +924,15 @@ l1 { /*Rotating Words*/
 .graph li[data-score="60%"]  { width: 55%; }
 .graph li[data-score="55%"]  { width: 50%; }
 .graph li[data-score="50%"]  { width: 45%; }
+
+.details-container.active .article-container {
+    display: block;
+}
+
+.job-description li {
+    font-size: 0.9em;
+    line-height: 1.8;
+    margin-bottom: 0.5em;  /* Increased from 1em to add more space between list items */
+    padding-left: 1em;
+    position: relative;
+}
