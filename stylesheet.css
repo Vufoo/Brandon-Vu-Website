@@ -69,7 +69,7 @@ nav {
 }
 
 .nav-links li {
-    padding: 1.5vw 2.5vw;
+    padding: 1vw 2vw;
     text-align: center;
     flex: 0 1 auto;
     transition: transform 0.3s ease;
@@ -77,8 +77,8 @@ nav {
     box-shadow: 4px 4px 0 #274073;
     margin: 2px;
     background-color: #9cadce;
-    min-width: 12vw;
-    max-width: 200px;
+    min-width: 10vw;
+    max-width: 180px;
 }
 
 .nav-links li:hover {
@@ -110,7 +110,7 @@ nav {
     width: 100%;
     height: 100%;
     font-family: 'Press Start 2P', monospace, sans-serif;
-    font-size: clamp(0.8rem, 1.2vw, 1.1rem);
+    font-size: clamp(0.7rem, 1vw, 1rem);
 }
 
 /* Hover state */
@@ -612,7 +612,7 @@ l1 { /*Rotating Words*/
     border-radius: 15px;  /* Added curved corners */
 }
 
-/* Show details on hover */f
+/* Show details on hover */
 .details-container:hover .article-container {
     display: block;
 }
