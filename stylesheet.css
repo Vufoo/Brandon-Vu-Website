@@ -628,12 +628,27 @@ l1 { /*Rotating Words*/
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     color: rgb(30, 30, 30);
+    font-size: 1em;
+}
+.article {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    color: rgb(30, 30, 30);
+    font-size: 1em;
 }
 
 .job-description {
     width: 100%;
     margin-top: 2%;
     color: rgb(68, 67, 84);
+    font-size: 0.85em;  /* Smaller font size for experience bullet points */
+    line-height: 1.8;
+    margin-bottom: 1.5em;
+    padding-left: 1em;
+    position: relative;
+
 }
 
 .title {
@@ -930,9 +945,22 @@ l1 { /*Rotating Words*/
 }
 
 .job-description li {
-    font-size: 0.9em;
-    line-height: 1.8;
-    margin-bottom: 0.5em;  /* Increased from 1em to add more space between list items */
-    padding-left: 1em;
+    font-size: 1em;
+    line-height: 1.6;  /* Reduced from 1.8 to help with centering */
+    margin-bottom: 1.5em;
+    padding-left: 1.5em;
     position: relative;
+    list-style: none;
+}
+
+.job-description li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.4em;  /* Adjusted from 0.5em to 0.3em for better centering */
+    width: 0.3em;
+    height: 0.3em;
+    background-color: rgb(190, 190, 200);
+    border: 2px solid #000;
+    box-shadow: 2px 2px 0 #000;
 }
