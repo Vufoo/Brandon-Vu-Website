@@ -838,35 +838,41 @@ footer p {
    ANIMATIONS
    ============================================ */
 @keyframes spin_words {
-    10% {
+    8.33% {
         transform: translateY(-135%);
     }
-    20% {
+    16.66% {
         transform: translateY(-120%);
     }
-    30% {
+    25% {
         transform: translateY(-235%);
     }
-    40% {
+    33.33% {
         transform: translateY(-220%);
     }
-    50% {
+    41.66% {
         transform: translateY(-335%);
     }
-    60% {
+    50% {
         transform: translateY(-320%);
     }
-    70% {
+    58.33% {
         transform: translateY(-435%);
     }
-    80% {
+    66.66% {
         transform: translateY(-420%);
     }
-    90% {
+    75% {
         transform: translateY(-535%);
     }
-    100% {
+    83.33% {
         transform: translateY(-520%);
+    }
+    91.66% {
+        transform: translateY(-635%);
+    }
+    100% {
+        transform: translateY(-620%);
     }
 }
 
